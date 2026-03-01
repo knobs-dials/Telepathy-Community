@@ -4,3 +4,5 @@ telepathy_files/
 .venv/
 *.session-journal
 *.csv
+build/
+dist/
