@@ -39,10 +39,10 @@ OPTIONAL: Installing cryptg ($ pip3 install cryptg) may improve Telepathy's spee
 telepathy [OPTIONS]
 ```
 
-Options:
-- **'--target', '-t' [CHAT]**
+### **`--target CHAT` / `-t CHAT`**
 
-this option will identify the target of the scan. The specified chat must be public or have a private link. To get the chat name, look for the 't.me/chatname' link, and subtract the 't.me/'.
+this option will identify the target of the scan. The specified chat must be public or have a private link.
+To get the chat name, look for the 't.me/chatname' link, and subtract the 't.me/'.
 
 For example:
 
@@ -50,12 +50,11 @@ For example:
 $ telepathy -t durov
 ```
 
-The default is a basic scan which will find the title, description, number of participants, username, URL, chat type, chat ID, access hash, first post date and any applicable restrictions to the chat. For group chats, Telepathy will also generate a memberlist (up to 5,000 members).
+### **`--comprehensive` / `-c`**
 
+By default we do a basic scan, meaning we find the title, description, number of participants, username, URL, chat type, chat ID, access hash, first post date and any applicable restrictions to the chat. For group chats, Telepathy will also generate a memberlist (up to 5,000 members).
 
-- **'--comprehensive', '-c'**
-
-A comprehensive scan will offer the same information as the basic scan, but will also archive a chat's message history, gather the number of reactions, archive how many times a message has been forwarded, the number of replies to each message, and more.
+If you specify this option, you get a comprehensive scanm wgucg offers the same information as the basic scan, but will also archive a chat's message history, gather the number of reactions, archive how many times a message has been forwarded, the number of replies to each message, and more.
 
 Reaction lists are included in the archive file, including basic calculations of engagement rate. Only the most-common reactions are listed, with the total including all possible reactions. Currently, Telepathy calculates engagement rates based on forwards, comments and reactions seperately, with a calculation based on post views and one based on chat participant count. In future, Telepathy may include deeper analytics which can be cross-compared between chats based on a combination of these metrics, fixing for when comments, reactions or forwards are allowed or disallowed in a given chat.
 
@@ -65,10 +64,11 @@ For example:
 $ telepathy -t durov -c
 ```
 
+#### **`--forwards` / `-f`**
 
-- **'--forwards', '-f'**
-
-This flag will create an edgelist based on messages forwarded into a chat. It can be used alongside either a default or comprehensive scan. Since 2.3.0, Telepathy now formats these edgelists to maximize compatability with Gephi.
+This flag will create an edgelist based on messages forwarded into a chat. 
+It can be used alongside either a default or comprehensive scan. 
+Since 2.3.0, Telepathy now formats these edgelists to maximize compatability with Gephi.
 
 For example:
 
@@ -79,9 +79,11 @@ $ telepathy -t durov -c -f
 ```
 
 
-- **'--media', '-m'**
+#### **`--media` / `-m`**
 
-Use this flag to include media archiving alongside a comprehensive scan. This makes the process take significantly longer and should also be used with caution: you'll download all media content from the target chat, and it's up to you to not store illegal files on your system.
+Use this flag to include media archiving alongside a comprehensive scan. 
+This makes the process take significantly longer and should also be used with caution: 
+you'll download all media content from the target chat, and it's up to you to not store illegal files on your system.
 
 To archive media, you must run a comprehensive scan:
 
@@ -92,7 +94,7 @@ $ telepathy -t durov -c -m
 Once files have downloaded, you can run exiftool on the associated media directory to gather deeper insights on the files, their metadata, and in some cases attribute who might be behind an anonymous channel. Further details are in the "bonus investigations tips" section of this README.
 
 
-- **'--user', '-u'**
+#### **`--user` / `-u`**
 
 Looks up a specified user. This will only work if your account has "encountered" the user before (for example, after archiving a group), you can specify User ID or @nickname. If looking up by username, it's not always necessary for your account to have already seen the user.
 
@@ -103,47 +105,55 @@ $ telepathy -t @test_user -u
 ```
 
 
-- **'--location', '-l']**
+#### **`--location` / `-l`**
 
-Finds users near to specified coordinates. Input should be longitude followed by latitude, seperated by a comma. This feature only works if your Telegram account has a profile image which is set to be publicly viewable. As of 2.3.4, this feature now includes channel lookups. 
+Finds users near to specified coordinates. Input should be longitude followed by latitude, seperated by a comma.
+This feature only works if your Telegram account has a profile image which is set to be publicly viewable.
+As of 2.3.4, this feature now includes channel lookups. 
 
-While searches for multiple locations at once may work in some cases, Telegram appears to have a limit on how quickly an account can cycle through locations. At the time of writing, this appears to be at least ten minutes. Further location scanning support while using multiple accounts is being explored for a future release.
+While searches for multiple locations at once may work in some cases, Telegram appears to have a limit on how quickly an account can cycle through locations.
+At the time of writing, this appears to be at least ten minutes. 
+Further location scanning support while using multiple accounts is being explored for a future release.
 
 ```
 $ telepathy -t 51.5032973,-0.1217424 -l
 ```
 
 
-- **'--alt', '-a' [NUMBER]**
+#### `--alt NUMBER` / `-a NUMBER`**
 
-Flag for running Telepathy from an alternative number or API details. You can use the same API key and Hash but authenticate with a different phone number. This allows for running multiple scans at the same time. Telepathy will default to the first details you offer, and up to four others can be added. Please see the notes at the top of this README for information regarding limitations with user IDs using this method.
+Flag for running Telepathy from an alternative number or API details.
+You can use the same API key and Hash but authenticate with a different phone number.
+This allows for running multiple scans at the same time. Telepathy will default to the first details you offer, and up to four others can be added.
+Please see the notes at the top of this README for information regarding limitations with user IDs using this method.
 
 ```
 $ telepathy -t Durov -c -a 1
 ```
 
 
-- **'--export', '-e'**
+#### **`--export` / `-e`**
 
-Exports all chats your account is part of to a CSV file. In a future release, this may assist with provisioning new accounts to automatically following the listed groups.
+Exports all chats your account is part of to a CSV file. 
+In a future release, this may assist with provisioning new accounts to automatically following the listed groups.
 
 ```
 $ telepathy -e
 ```
   
 
-- **'--reply', '-r'**
+#### **`--reply` / `-r`**
 
-Flag for enabling channel reply retrieval, this will archive replies and list users who replied to messages in the target channel. 
+Enable channel reply retrieval, which will archive replies and list users who replied to messages in the target channel. 
 
 ```
 $ telepathy -t [CHANNEL] -c -r 
 ```
 
 
-- **'--translate', '-tr'**
+#### **`--translate` / `-tr`**
 
-Flag for enabling auotmatic translation (currently only into English) during message retrieval.
+Enable auotmatic translation (currently only into English) during message retrieval.
 
 ```
 $ telepathy -t [CHANNEL] -c -tr
