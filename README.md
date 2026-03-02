@@ -62,7 +62,7 @@ $ telepathy -t durov
 
 By default we do a basic scan, meaning we find the title, description, number of participants, username, URL, chat type, chat ID, access hash, first post date and any applicable restrictions to the chat. For group chats, Telepathy will also generate a memberlist (up to 5,000 members).
 
-If you specify this option, you get a comprehensive scanm wgucg offers the same information as the basic scan, but will also archive a chat's message history, gather the number of reactions, archive how many times a message has been forwarded, the number of replies to each message, and more.
+If you specify this option, you get a comprehensive scan, which offers the same information as the basic scan, but will also archive a chat's message history, gather the number of reactions, archive how many times a message has been forwarded, the number of replies to each message, and more.
 
 Reaction lists are included in the archive file, including basic calculations of engagement rate. Only the most-common reactions are listed, with the total including all possible reactions. Currently, Telepathy calculates engagement rates based on forwards, comments and reactions seperately, with a calculation based on post views and one based on chat participant count. In future, Telepathy may include deeper analytics which can be cross-compared between chats based on a combination of these metrics, fixing for when comments, reactions or forwards are allowed or disallowed in a given chat.
 
