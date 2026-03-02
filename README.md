@@ -43,7 +43,7 @@ This fork currently focuses on trying to make it easier to run your own from the
      `poetry install`
 
 The last step installed telepathy isolated within that virtualenv, 
-which means you have to return to that virualenv to run it.
+so whenever you want to run it, you need to return to it.
 
 Perhaps the easiest is to `cd` to the project dir before doing `poetry run telepathy`
 (telepathy is also a command line tool that was registerd within that virualenv)
