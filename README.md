@@ -11,6 +11,7 @@ This fork currently focuses on trying to make it easier to run your own from the
 
 ## Installation
 
+### Development tools
 We use the development tools `poetry` and `pyenv` 
 (to, respectively, make the 'create virtual environment that will run this'
 and 'instally specific python version separately'), both because they make it easier to reproducably run specific versions, and without messing with your system python at all.
@@ -23,7 +24,7 @@ It does mean you have to install those two first:
   (this installs into your specific user account, no sudo)
 
 
-As to telepathy itself:
+### Telepathy itself
 * get contents of this repo: `git clone https://github.com/knobs-dials/Telepathy-Community.git`
 
 * we currently recommend installing python 3.10 via pyenv: `pyenv install 3.10` for poetry to pick up in the next step:
