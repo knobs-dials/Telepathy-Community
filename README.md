@@ -1,30 +1,37 @@
-## Telepathy: An OSINT toolkit for investigating Telegram chats. Developed by Jordan Wildon. Version 2.3.4.
+## A fork of Telepathy: An OSINT toolkit for investigating Telegram chats
 
-Telepathy has been described as the "swiss army knife of Telegram tools," allowing OSINT analysts, researchers and digital investigators to archive Telegram chats (including replies, media content, comments and reactions), gather memberlists, lookup users by given location, analyze top posters in a chat, map forwarded messages, and more.
+This is a fork of Telepathy(-Community), a "swiss army knife of Telegram tools",
+currently focusing on trying to make it easier to run your own from the command line,
+and perhaps some minor development.
 
-The toolkit has already seen a wide variety of use cases, including but not limited to: in investigative and data journalism, by academic and research institutions, and for intelligence gathering and analysis.
+Prose's repo this came from is at [prose-intelligence-ltd/Telepathy-Community](https://github.com/prose-intelligence-ltd/Telepathy-Community). 
 
-
-## Are you looking for a enterprise-grade version of Telepathy?
-Visit [prose.ltd](https://prose.ltd) to find out how we can turbocharge your Telegram data collection with Telepathy Pro. No accounts, dealing with the command line, or hassle needed!
+Prose's further development into a web based index is at [prose.ltd](https://prose.ltd/).
 
 
 
 ## Installation
 
-### Pip install (recommended)
+If you want a pip install, you are probably looking for Prose's version.
 
-```
-$ pip3 install telepathy
-```
 
-### Install from source
+This project is an 'install from source' derivation, 
+using [poetry](https://python-poetry.org/) 
+to make the 'create virtual environment that will run this' step easier.
 
-```
-$ git clone https://github.com/jordanwildon/Telepathy.git
-$ cd Telepathy
-$ pip install -r requirements.txt
-```
+* install poetry, in ubuntu this would be `python install python3-poetry`
+
+* clone this repo, `git clone https://github.com/knobs-dials/Telepathy-Community.git`
+
+* tell poetry to create a virtualenv for it, with `poetry install`
+
+
+The last step installed telepathy isolated within that virtualenv,
+which keeps your system cleaner, but it does mean you will
+have to find that virualenv to run it.
+
+Perhaps the easiest is to `cd` to the project dir before doing `poetry run telepathy`
+
 
 ## Setup
 
