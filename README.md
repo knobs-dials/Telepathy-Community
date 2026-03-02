@@ -16,8 +16,8 @@ This project is an 'install from source' derivation.
 It uses [poetry](https://python-poetry.org/) to make the 
 'create virtual environment that will run this' step easier.
 
-This also means you can install for a single,
-and that it cannot mess with your system python.
+This also means you can install for a single user account - yours - 
+so that you do not need to be admin, and that it cannot mess with your system python.
 
 Steps:
 * install poetry, in ubuntu this would be `apt install python3-poetry`
