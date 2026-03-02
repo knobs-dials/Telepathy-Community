@@ -13,7 +13,9 @@ This fork currently focuses on trying to make it easier to run your own from the
 
 We use the development tools `poetry` and `pyenv` 
 (to, respectively, make the 'create virtual environment that will run this'
-and 'instally specific python version separately'), both because they make it easier to reproducably run specific versions, and without messing with your system python at all. It does mean you have to install those two first:
+and 'instally specific python version separately'), both because they make it easier to reproducably run specific versions, and without messing with your system python at all.
+
+It does mean you have to install those two first:
 
 * (as admin) install poetry, in ubuntu this would be `sudo apt install python3-poetry`
 
@@ -22,17 +24,15 @@ and 'instally specific python version separately'), both because they make it ea
 
 
 As to telepathy itself:
-* clone this repo, `git clone https://github.com/knobs-dials/Telepathy-Community.git`
+* get contents of this repo: `git clone https://github.com/knobs-dials/Telepathy-Community.git`
 
-* we currently recommend installing python 3.10 via pyenv, i.e. `pyenv install 3.10` for poetry to pick up in the next step:
+* we currently recommend installing python 3.10 via pyenv: `pyenv install 3.10` for poetry to pick up in the next step:
 
 * now `cd` to the cloned repo and tell poetry to create a virtualenv for it, with `poetry install`
 
+The last step installed telepathy isolated within that virtualenv, 
+which means you have to return to that virualenv to run it.
 
-The last step installed telepathy isolated within that virtualenv,
-which keeps it separate from your system python.
-
-It does mean you have to return to that virualenv to run it.
 Perhaps the easiest is to `cd` to the project dir before doing `poetry run telepathy`
 (telepathy is also a command line tool that was registerd within that virualenv)
 
