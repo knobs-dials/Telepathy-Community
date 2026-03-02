@@ -35,7 +35,9 @@ Perhaps the easiest is to `cd` to the project dir before doing `poetry run telep
 
 ## Setup
 
-On first use, Telepathy will ask for your Telegram API details (obtained from my.telegram.org). Once those are set up, it will prompt you to enter your phone number again and then send an authorization code to your Telegram account. If you have two-factor authentication enabled, you'll be asked to input your Telegram password.
+On first use, Telepathy will ask for your Telegram API details (obtained from my.telegram.org). 
+
+Once those are set up, it will prompt you to enter your phone number again and then send an authorization code to your Telegram account. If you have two-factor authentication enabled, you'll be asked to input your Telegram password.
 
 OPTIONAL: Installing cryptg ($ pip3 install cryptg) may improve Telepathy's speed. The package hand decryption by Python over to C, making media downloads in particular quicker and more efficient. 
 
@@ -43,7 +45,7 @@ OPTIONAL: Installing cryptg ($ pip3 install cryptg) may improve Telepathy's spee
 ## Usage:
 
 ```
-telepathy [OPTIONS]
+poetry run telepathy [OPTIONS]
 ```
 
 ### **`--target CHAT` / `-t CHAT`**
@@ -92,7 +94,7 @@ Use this flag to include media archiving alongside a comprehensive scan.
 This makes the process take significantly longer and should also be used with caution: 
 you'll download all media content from the target chat, and it's up to you to not store illegal files on your system.
 
-To archive media, you must run a comprehensive scan:
+To archive media, you must run a comprehensive scan **and** add this flag:
 
 ```
 $ telepathy -t durov -c -m
