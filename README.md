@@ -25,11 +25,17 @@ It does mean you have to install those two first:
 
 
 ### Telepathy itself
-* get contents of this repo: `git clone https://github.com/knobs-dials/Telepathy-Community.git`
+* get contents of this repo:
+  
+    `git clone https://github.com/knobs-dials/Telepathy-Community.git`
 
-* we currently recommend installing python 3.10 via pyenv: `pyenv install 3.10` for poetry to pick up in the next step:
+* we currently recommend installing python 3.10 via pyenv:  for poetry to pick up in the next step:
+  
+    `pyenv install 3.10` 
 
-* now `cd` to the cloned repo and tell poetry to create a virtualenv for it, with `poetry install`
+* now `cd` to the cloned repo and tell poetry to create a virtualenv for it with the dependencies ant telepathy itself installed:
+  
+     `poetry install`
 
 The last step installed telepathy isolated within that virtualenv, 
 which means you have to return to that virualenv to run it.
