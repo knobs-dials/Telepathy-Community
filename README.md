@@ -11,25 +11,30 @@ its further development into a web based index is at [prose.ltd](https://prose.l
 
 ## Installation
 
-If you want a pip install, you are probably looking for Prose's version.
+This project is an 'install from source' derivation.
 
+It uses [poetry](https://python-poetry.org/) to make the 
+'create virtual environment that will run this' step easier.
 
-This project is an 'install from source' derivation, 
-using [poetry](https://python-poetry.org/) 
-to make the 'create virtual environment that will run this' step easier.
+This also means you can install for a single,
+and that it cannot mess with your system python.
 
-* install poetry, in ubuntu this would be `python install python3-poetry`
+Steps:
+* install poetry, in ubuntu this would be `apt install python3-poetry`
 
 * clone this repo, `git clone https://github.com/knobs-dials/Telepathy-Community.git`
 
-* tell poetry to create a virtualenv for it, with `poetry install`
+* for now we recommend installing python 3.10 via pyenv (this is per user) i.e. `pyenv install 3.10` for poetry to pick up in the next step:
+
+* now `cd` to the cloned repo and tell poetry to create a virtualenv for it, with `poetry install`
 
 
 The last step installed telepathy isolated within that virtualenv,
-which keeps your system cleaner, but it does mean you will
-have to find that virualenv to run it.
+which keeps it separate from your system python.
 
+It does mean you have to return to that virualenv to run it.
 Perhaps the easiest is to `cd` to the project dir before doing `poetry run telepathy`
+(telepathy is also a command line tool that was registerd within that virualenv)
 
 
 ## Setup
