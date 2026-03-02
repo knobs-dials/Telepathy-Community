@@ -2,29 +2,29 @@
 
 This is a fork of [Telepathy-Community](https://github.com/prose-intelligence-ltd/Telepathy-Community), a "swiss army knife of Telegram tools".
 
-This fork currently focuses on trying to make it easier to run your own from the command line,
-and perhaps some minor development.
-
 Prose's repo this came from is at [prose-intelligence-ltd/Telepathy-Community](https://github.com/prose-intelligence-ltd/Telepathy-Community),
 its further development into a web based index is at [prose.ltd](https://prose.ltd/).
 
 
+This fork currently focuses on trying to make it easier to run your own from the command line, and perhaps do some minor development.
+
+
 ## Installation
 
-This project is an 'install from source' derivation.
+We use the development tools `poetry` and `pyenv` 
+(to, respectively, make the 'create virtual environment that will run this'
+and 'instally specific python version separately'), both because they make it easier to reproducably run specific versions, and without messing with your system python at all. It does mean you have to install those two first:
 
-It uses [poetry](https://python-poetry.org/) to make the 
-'create virtual environment that will run this' step easier.
-
-This also means you can install for a single user account - yours - 
-so that you do not need to be admin, and that it cannot mess with your system python.
-
-Steps:
 * (as admin) install poetry, in ubuntu this would be `sudo apt install python3-poetry`
 
+* pyenv [has its own instructions](https://github.com/pyenv/pyenv?tab=readme-ov-file#a-getting-pyenv)
+  (this installs into your specific user account, no sudo)
+
+
+As to telepathy itself:
 * clone this repo, `git clone https://github.com/knobs-dials/Telepathy-Community.git`
 
-* for now we recommend installing python 3.10 via pyenv (this is per user) i.e. `pyenv install 3.10` for poetry to pick up in the next step:
+* we currently recommend installing python 3.10 via pyenv, i.e. `pyenv install 3.10` for poetry to pick up in the next step:
 
 * now `cd` to the cloned repo and tell poetry to create a virtualenv for it, with `poetry install`
 
