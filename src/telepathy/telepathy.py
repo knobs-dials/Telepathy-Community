@@ -1740,14 +1740,15 @@ class Telepathy_cli:
                     )
                     await group_channel.analyze_group_channel()
 
-    class PlaceholderClass:
-    def __init__(self):
-        self.d500 = 0
-        self.d1000 = 0
-        self.d2000 = 0
-        self.d3000 = 0
-        self.save_file = ""
-        self.total = 0
+    class DistancePlaceholder:
+        def __init__(self):
+            self.d500      = 0
+            self.d1000     = 0
+            self.d2000     = 0
+            self.d3000     = 0
+            self.save_file = ""
+            self.total     = 0
+
 
 async def analyze_location(self, _target):
     print(
@@ -1805,7 +1806,7 @@ async def analyze_location(self, _target):
         columns=["User_ID", "Distance", "Latitude", "Longitude", "Date_retrieved"],
     )
 
-    distance_obj = PlaceholderClass()
+    distance_obj = DistancePlaceholder()
 
     for account, distance in user_df.itertuples(index=False):
         account = int(account)
