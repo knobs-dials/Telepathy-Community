@@ -24,7 +24,7 @@ This fork currently focuses on trying to make it easier to run your own from the
     `pipx install poetry`
 
 * We also use `pyenv` to get a specific version of python to install in our user account.
-  This is technically optional, but the project currently wishes specifically for python 3.10
+  - This is technically optional, but only if you somehow already have a python 3.10, which this project currently specifically wants.
   - pyenv [has its own instructions](https://github.com/pyenv/pyenv?tab=readme-ov-file#a-getting-pyenv)
     (this installs into your specific user account, again no admin required)
 
