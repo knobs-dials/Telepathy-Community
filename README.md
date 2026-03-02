@@ -20,7 +20,7 @@ This also means you can install for a single user account - yours -
 so that you do not need to be admin, and that it cannot mess with your system python.
 
 Steps:
-* install poetry, in ubuntu this would be `apt install python3-poetry`
+* (as admin) install poetry, in ubuntu this would be `sudo apt install python3-poetry`
 
 * clone this repo, `git clone https://github.com/knobs-dials/Telepathy-Community.git`
 
