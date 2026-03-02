@@ -1,13 +1,12 @@
 ## A fork of Telepathy: An OSINT toolkit for investigating Telegram chats
 
-This is a fork of Telepathy(-Community), a "swiss army knife of Telegram tools",
-currently focusing on trying to make it easier to run your own from the command line,
+This is a fork of [Telepathy-Community](https://github.com/prose-intelligence-ltd/Telepathy-Community), a "swiss army knife of Telegram tools".
+
+This fork currently focuses on trying to make it easier to run your own from the command line,
 and perhaps some minor development.
 
-Prose's repo this came from is at [prose-intelligence-ltd/Telepathy-Community](https://github.com/prose-intelligence-ltd/Telepathy-Community). 
-
-Prose's further development into a web based index is at [prose.ltd](https://prose.ltd/).
-
+Prose's repo this came from is at [prose-intelligence-ltd/Telepathy-Community](https://github.com/prose-intelligence-ltd/Telepathy-Community),
+its further development into a web based index is at [prose.ltd](https://prose.ltd/).
 
 
 ## Installation
