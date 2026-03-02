@@ -188,11 +188,15 @@ $ exiftool * > metadata.txt
  - Group and inferred channel memberlists offer a point of further investigation for usernames found. By using [Maigret](https://github.com/soxoj/maigret), you can look up where else a username has been used online. While this is not accurate in all cases, it's been proven to be helpful for identifying where a person has reused handles across platforms. In this case, remember to verify your findings to avoid false positives.
 
 
-## A note on how Telegram works
+## Notes on how Telegram works
 
-Telegram chats are organised into three key types: Channels, Megagroups/Supergroups and Gigagroups. Each option works slightly differently depending on the chat type. Channels can have seemingly unlimited subscribers and are where an admin will broadcast messages to an audience, Megagroups can have up to 200,000 members, each of whom can participate (if not restricted), and Gigagroups sit somewhere between the two.
+Telegram chats are organised into three key types: Channels, Megagroups/Supergroups and Gigagroups.
+Each option works slightly differently depending on the chat type.
+Channels can have seemingly unlimited subscribers and are where an admin will broadcast messages to an audience,
+Megagroups can have up to 200,000 members, each of whom can participate (if not restricted), and 
+Gigagroups sit somewhere between the two.
 
-
+<!--
 ## Upcoming changes
 In some environments (particularly Windows), Telepathy struggles to effectively manage files and can sometimes produce errors. Fixes for these errors will come in due course.
 
@@ -202,19 +206,20 @@ Upcoming features include:
   - [ ] A new method to once again gather complete memberlists (currently restricted by the API).
   - [ ] Ensuring inferred channel memberlists don't contain duplicate entries.
   - [ ] Exploration of whether channel events can be included, such as name changes.
+-->
 
-## feedback
+## Usage and credits
 
-Please send feedback to @jordanwildon on Twitter. You can follow Telepathy updates at @proseltd.
+You may use Telepathy however you like, but your usecase is your responsibility.
+Be safe and respectful.
 
+Big thanks to the original creators and contributors named in the source repo:
+Jordan Wildon (@jordanwildon), 
+[Giacomo Giallombardo](https://github.com/aaarghhh),
+[jkctech](https://github.com/jkctech/Telegram-Trilateration),
+Alex Newhouse (@AlexBNewhouse), and
+[Francesco Poldi](https://github.com/pielco11).
 
-## Usage terms
+As it notes, credit for the use of this tool in published research is desired, but not required.
 
-You may use Telepathy however you like, but your usecase is your responsibility. Be safe and respectful. If your usecase is for commercial purposes, please consider cour enterprise options at [prose.ltd](https://prose.ltd)
-
-
-## Credits
-
-All tools created by Jordan Wildon (@jordanwildon). Special thanks go to [Giacomo Giallombardo](https://github.com/aaarghhh) for adding additional features and code refactoring, [jkctech](https://github.com/jkctech/Telegram-Trilateration) for collaboration on location lookup via the 'People Near Me' feature, and Alex Newhouse (@AlexBNewhouse) for his help with Telepathy v1. Shoutout also to [Francesco Poldi](https://github.com/pielco11) for being a sounding board and offering help and advice when it comes to bug fixes.
-
-Where possible, credit for the use of this tool in published research is desired, but not required. This can either come in the form of crediting Jordan Wildon, Prose Intelligence, or crediting Telepathy itself.
+If your usecase is for commercial purposes, also consider Prose's enterprise options at [prose.ltd](https://prose.ltd)
