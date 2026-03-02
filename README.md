@@ -12,16 +12,21 @@ This fork currently focuses on trying to make it easier to run your own from the
 ## Installation
 
 ### Development tools
-We use the development tools `poetry` and `pyenv` 
-(to, respectively, make the 'create virtual environment that will run this'
-and 'instally specific python version separately'), both because they make it easier to reproducably run specific versions, and without messing with your system python at all.
 
-It does mean you have to install those two first:
+* (optional, recommended) install pipx to make poetry install easier:
 
-* (as admin) install poetry, in ubuntu this would be `sudo apt install python3-poetry`
+    `python3 -m pip install --user pipx && python3 -m pipx ensurepath`
 
-* pyenv [has its own instructions](https://github.com/pyenv/pyenv?tab=readme-ov-file#a-getting-pyenv)
-  (this installs into your specific user account, no sudo)
+* We use `poetry` to make the 'create virtual environment that will run this' step eaiser.
+  You can get a recent version, and avoid having to do anything as admin, by installing it through pipx.
+  (if you skip pipx: distro package management often have poetry, but frequently only old versions)
+
+    `pipx install poetry`
+
+* We also use `pyenv` to get a specific version of python to install in our user account.
+  This is technically optional, but the project currently wishes specifically for python 3.10
+  - pyenv [has its own instructions](https://github.com/pyenv/pyenv?tab=readme-ov-file#a-getting-pyenv)
+    (this installs into your specific user account, again no admin required)
 
 
 ### Telepathy itself
