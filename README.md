@@ -36,14 +36,18 @@ which means you have to return to that virualenv to run it.
 Perhaps the easiest is to `cd` to the project dir before doing `poetry run telepathy`
 (telepathy is also a command line tool that was registerd within that virualenv)
 
+<!--
+TODO: figure out whether cryptg should be on an optional flag.
+The package hand decryption by Python over to C, making media downloads in particular quicker and more efficient.
+-->
+
 
 ## Setup
 
 On first use, Telepathy will ask for your Telegram API details (obtained from my.telegram.org). 
 
-Once those are set up, it will prompt you to enter your phone number again and then send an authorization code to your Telegram account. If you have two-factor authentication enabled, you'll be asked to input your Telegram password.
-
-OPTIONAL: Installing cryptg ($ pip3 install cryptg) may improve Telepathy's speed. The package hand decryption by Python over to C, making media downloads in particular quicker and more efficient. 
+Once those are set up, it will prompt you to enter your phone number again and then send an authorization code to your Telegram account. 
+If you have two-factor authentication enabled, you'll be asked to input your Telegram password.
 
 
 ## Usage:
