@@ -14,7 +14,7 @@ import time
 import configparser
 import asyncio
 
-from src.telepathy.utils import (
+from telepathy.utils import (
     print_banner,
     color_print_green,
     populate_user,
